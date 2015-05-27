@@ -18,11 +18,11 @@ $(document).on(ready, function () {
   // })
   $('#staticButton').on('click', function () {
     console.log('CALLED CALLED CALLED CALLED CALLED ')
-    file.downloadFile(imageUrl, 'images/testImg1.png', function (err, path) {
+    file.loadFile(imageUrl, 'images/testImg1.png', function (err, path) {
       if (err) {
-        console.log('download error source ' + error.source)
-        console.log('download error target ' + error.target)
-        console.log('upload error code' + error.code)
+        console.log('download error source ' + err.source)
+        console.log('download error target ' + err.target)
+        console.log('upload error code ' + err.code)
       } else {
         console.log('SHOWING IMG ON MAP:', path)
         map.toggleStaticImage(path, [[-43.62262, 172.68359], [-43.49862, 172.94415]])

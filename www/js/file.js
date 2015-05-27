@@ -1,18 +1,15 @@
 'use strict';
 /*globals FileTransfer*/
 
-var downloadFile = function (url, path, cb) {
-  path = window.cordova.file.dataDirectory + path
+var downloadAndSaveFile = function (url, path, cb) {
   var fileTransfer = new FileTransfer();
   var uri = encodeURI(url);
-
-  console.log('DOWNLOAD TO: ', path)
 
   fileTransfer.download(
     uri,
     path,
-    function (entry) {
-      cb(undefined, entry.toURL())
+    function (file) {
+      cb(undefined, file.toURL())
     },
     function (error) {
       cb(error)
@@ -20,6 +17,22 @@ var downloadFile = function (url, path, cb) {
   )
 }
 
+var loadFile = function (url, path, cb) {
+  path = window.cordova.file.dataDirectory + path
+  window.resolveLocalFileSystemURL(
+    path,
+    function (file) {
+      // File exists
+      console.log('THE FILE EXSTS', file.toURL())
+      return cb(undefined, file.toURL())
+    },
+    function () {
+      console.log('DOWNLOADING THE FILE NOW')
+      return downloadAndSaveFile(url, path, cb)
+    }
+  )
+}
+
 module.exports = {
-  downloadFile: downloadFile
+  loadFile: loadFile
 }
