@@ -3,6 +3,7 @@
 require('./loadEnv')()
 var map = require('./map')
 var image = require('./image')
+var file = require('./file')
 var $ = require('jquery')
 
 var ready = process.env.ENVIRONMENT === 'DEVELOPMENT' ? 'ready' : 'deviceready'
@@ -17,7 +18,7 @@ $(document).on(ready, function () {
   // })
   $('#staticButton').on('click', function () {
     console.log('CALLED CALLED CALLED CALLED CALLED ')
-    image.downloadFile(imageUrl, 'images/testImg1.png', function (err, path) {
+    file.downloadFile(imageUrl, 'images/testImg1.png', function (err, path) {
       if (err) {
         console.log('download error source ' + error.source)
         console.log('download error target ' + error.target)
