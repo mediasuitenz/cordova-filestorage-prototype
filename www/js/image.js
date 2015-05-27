@@ -1,5 +1,11 @@
 'use strict';
 
+/*
+Here I was downloading an image, keeping it in memory as a blob,
+and supplying the blob URL which can be displayed in leafet.
+There were attempts to save the image in localstorage, but no success yet.
+*/
+
 var getUrlFromImageArray = function (arrayBufferView) {
   var blob = new Blob([arrayBufferView], { type: 'image/jpeg' })
   var urlCreator = window.URL || window.webkitURL

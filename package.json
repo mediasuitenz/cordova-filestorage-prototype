@@ -38,10 +38,6 @@
     ""
   ],
   "dependencies": {
-    "env-parser": "^1.0.0",
-    "env-reader": "^1.0.0",
-    "env-writer": "^2.0.0",
-    "envoodoo": "^2.0.3",
     "insert-css": "^0.2.0",
     "jquery": "^1.11.3",
     "leaflet": "^0.7.3"

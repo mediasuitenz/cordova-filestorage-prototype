@@ -1,6 +1,12 @@
 'use strict';
 /*globals FileTransfer*/
 
+/*
+Here I was downloading an image and saving it to disk. If a
+file already exists at that path, then it is not re-downloaded.
+Returns the file's full path on disk.
+*/
+
 var downloadAndSaveFile = function (url, path, cb) {
   var fileTransfer = new FileTransfer();
   var uri = encodeURI(url);

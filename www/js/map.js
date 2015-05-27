@@ -1,5 +1,10 @@
 'use strict';
 
+/*
+Here I am showing a leaflet map, and am able to toggle
+a static image layer.
+*/
+
 var L = require('leaflet')
 var css = require('fs').readFileSync('./node_modules/leaflet/dist/leaflet.css')
 require('insert-css')(css)

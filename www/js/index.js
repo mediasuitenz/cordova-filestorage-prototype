@@ -1,12 +1,12 @@
 'use strict';
 
-require('./loadEnv')()
 var map = require('./map')
 var image = require('./image')
 var file = require('./file')
 var $ = require('jquery')
 
-var ready = process.env.ENVIRONMENT === 'DEVELOPMENT' ? 'ready' : 'deviceready'
+var isBrowser = 0
+var ready = isBrowser ? 'ready' : 'deviceready'
 $(document).on(ready, function () {
 
   map.init()
