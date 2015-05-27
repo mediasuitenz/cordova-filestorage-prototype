@@ -5,6 +5,8 @@
 Here I was downloading an image and saving it to disk. If a
 file already exists at that path, then it is not re-downloaded.
 Returns the file's full path on disk.
+
+See http://docs.phonegap.com/en/edge/cordova_file_file.md.html#LocalFileSystem
 */
 
 var downloadAndSaveFile = function (url, path, cb) {

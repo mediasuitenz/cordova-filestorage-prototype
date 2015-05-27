@@ -21,6 +21,7 @@ var togglePdfFrame = function (path) {
 }
 
 // Best option, uses inAppBrowser plugin
+// See http://docs.phonegap.com/en/edge/cordova_inappbrowser_inappbrowser.md.html
 var openPdfTab = function (path) {
   window.open(path, '_blank', 'location=no');
 }
