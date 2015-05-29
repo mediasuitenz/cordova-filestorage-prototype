@@ -1,17 +1,17 @@
 {
-  "name": "newapp",
+  "name": "sites-at-risk-register",
   "description": "",
   "version": "0.0.0",
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mediasuitenz/newapp.git"
+    "url": "https://github.com/mediasuitenz/sites-at-risk-register.git"
   },
   "bugs": {
-    "url": "https://github.com/mediasuitenz/newapp/issues"
+    "url": "https://github.com/mediasuitenz/sites-at-risk-register/issues"
   },
-  "homepage": "https://github.com/mediasuitenz/newapp",
+  "homepage": "https://github.com/mediasuitenz/sites-at-risk-register",
   "author": {
     "name": "matt-in-a-hat",
     "email": "matt@mediasuite.co.nz",
@@ -21,7 +21,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "lint": "jshint .",
+    "lint": "jshint www/js/",
     "pretest": "npm run lint",
     "test:ci": "mocha --ui mocha-given -R spec test",
     "test:dev": "testem .",

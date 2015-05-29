@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>testapp</name>
+<widget id="sarr" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>SARR</name>
     <description>
-        testapp
+        Sites At Risk Register
     </description>
     <author email="matt@mediasuite.co.nz" href="http://mediasuite.co.nz">
         matt-in-a-hat
