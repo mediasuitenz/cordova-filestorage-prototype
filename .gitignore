@@ -28,4 +28,3 @@ node_modules
 .lock-wscript
 
 .DS_Store
-www/dist
