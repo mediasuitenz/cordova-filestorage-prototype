@@ -27,7 +27,7 @@
     "test:dev": "testem .",
     "test": "npm run test:ci",
     "prepublish": "npm test && npm prune",
-    "startApp": "ENVIRONMENT=DEVELOPMENT && buildbro -j -g -b -w -s www www/js/index.js www/dist/bundle.min.js",
+    "startApp": "buildbro -j -g -b -w -s www www/js/index.js www/dist/bundle.min.js",
     "buildApp": "buildbro -j -g -b www/js/index.js www/dist/bundle.min.js",
     "build": "npm run buildApp && cordova build"
   },
